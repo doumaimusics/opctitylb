@@ -117,10 +117,10 @@
 	    $('.innerarea,#next,#prev').hover(function(){
 	    	clearInterval(timer);
 	    },function(){
-	    	timer = function(){
-	    		var go = (curr+1)%5;
-	    		$('.yd a').eq(go).click();
-	    	}
+	       timer = setInterval(function(){
+	       	var go = (curr+1)%5;
+	       	$('.yd a').eq(go).click();
+	       },1000)
 	    })
 	    
 	    //
